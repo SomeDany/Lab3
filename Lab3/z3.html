@@ -13,14 +13,14 @@
                 
                     
                     p = 1, f = 1;
-                    function e(x, n)
+                    function ln(x, n)
                      {
                          var r;
                          if (n == 0)
                              return x;
   
                         //Рекурсия
-                        r = e(x, n - 1);
+                        r = ln(x, n - 1);
                         // (-1)^n * x^(n+1)
                         p = Math.abs(p) * x* Math.pow((-1),n);
 
@@ -34,7 +34,7 @@
                     
                     if(x>-1 && x<=1){
                     var n = parseFloat(prompt("Введите значение n",""));
-                    var res = e(x, n);
+                    var res = ln(x, n);
   
                     document.write(res.toFixed(6));
                     }
