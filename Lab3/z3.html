@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Веклич Д.Н.</title>
+                <style>
+
+                </style>
+        </head>
+            <body>
+                <script>
+                
+                    
+                    p = 1, f = 1;
+                    function e(x, n)
+                     {
+                         var r;
+                         if (n == 0)
+                             return x;
+  
+                        //Рекурсия
+                        r = e(x, n - 1);
+                        // (-1)^n * x^(n+1)
+                        p = Math.abs(p) * x* Math.pow((-1),n);
+
+                        //n+1
+                        f = f+1;
+                        return (r + p / f);
+                    }
+  
+                     
+                    var x = parseFloat(prompt("Введите значение x, больше -1 и меньше 1 (Десятичное число вводить через точку) ",""));
+                    
+                    if(x>-1 && x<=1){
+                    var n = parseFloat(prompt("Введите значение n",""));
+                    var res = e(x, n);
+  
+                    document.write(res.toFixed(6));
+                    }
+                    else{
+                        alert('Введите -1 < x  и x <=1');
+                        location.reload();
+                    }
+                
+                </script> 
+            </body>
+    </html>

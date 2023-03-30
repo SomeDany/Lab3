@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Веклич Д.Н.</title>
+                
+        </head>
+            <body>
+                <script>
+                    "use strict";
+                    function WeekDay(){
+                        var color=["Black","Grey","DarkBlue","Blue","Purple","Violet","Orange"];
+                        var size=["40","35","30","25","20","15","10"];
+                        let days=['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'];
+                        for(let i=0;i<7;i++){
+                        document.write("<p style='color:"+color[i]+";font-size:"+size[i]+"px;'>",days[i],"</p>");
+                        }
+                    }
+
+                    
+                    WeekDay();
+                    
+                </script>
+            </body>
+    </html>
